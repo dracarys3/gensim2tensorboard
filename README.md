@@ -16,7 +16,7 @@ git clone https://github.com/ArdalanM/gensim2tensorboard.git
 ## Example:
 - Train from text file:
 ```
-python3 -m src.train --file "data/SMSSpamCollection.txt" \
+python -m src.train --file "data/SMSSpamCollection.txt" \
                      --input_type 'txt' \
                      --folder "models/SMSSpamCollection"
                      --size 50 \
@@ -37,7 +37,7 @@ python3 -m src.train --file "data/SMSSpamCollection.txt" \
 
 - Train from csv file:
 ```
-python3 -m src.train --file "data/movie_reviews.csv" \
+python -m src.train --file "data/movie_reviews.csv" \
                      --input_type "csv" \
                      --separator "," \
                      --folder "models/movie_reviews" \
@@ -57,6 +57,11 @@ python3 -m src.train --file "data/movie_reviews.csv" \
                      --cbow_mean 1 \
                      --iter 5 \
                      --null_word 0
+                     
+python -m src.train --file "data/sample.txt" --input_type txt --folder "models/sample" --size 300 --alpha 0.012 --window 7 --min_count 3 --sample 1e-3 --seed 1 --workers 4 --min_alpha 0.0001 --sg 1 --hs 0 --negative 10 --cbow_mean 0 --iter 20 --null_word 0
+
+
+
 ```
 
 Eventially, visualize the embeddings with tensorboard:

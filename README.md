@@ -58,6 +58,11 @@ python -m src.train --file "data/movie_reviews.csv" \
                      --iter 5 \
                      --null_word 0
                      
+                     
+```
+
+- Sample text training:
+```
 python -m src.train --file "data/sample.txt" --input_type txt --folder "models/sample" --size 300 --alpha 0.012 --window 7 --min_count 3 --sample 1e-3 --seed 1 --workers 4 --min_alpha 0.0001 --sg 1 --hs 0 --negative 10 --cbow_mean 0 --iter 20 --null_word 0
 
 
